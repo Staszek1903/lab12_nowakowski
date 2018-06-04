@@ -9,7 +9,7 @@ class CTablica
 public:
     CTablica();
 
-    std::vector <int> _tab;
+    std::vector <int> tab;
 
     //returns first- comparison count; second- swap count
     std::pair <int, int> bubble_sort();
