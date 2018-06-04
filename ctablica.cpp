@@ -5,12 +5,25 @@ CTablica::CTablica()
 
 }
 
-void CTablica::foo()
+std::pair<int, int> CTablica::bubble_sort()
 {
-    std::cout<<tab.size()<<std::endl;
-    tab.push_back(11);
-    std::cout<<tab.size()<<std::endl;
-    std::cout<<tab[0]<<std::endl;
-    tab.clear();
-    std::cout<<tab.size()<<std::endl;
+    //std::pair <int, int> p;
+    //return p;
+    //int x,y;
+    //return std::make_pair<int,int>(x,y);
+}
+
+std::pair<int, int> CTablica::quick_sort_lomuto()
+{
+
+}
+
+std::pair<int, int> CTablica::quick_sort_hoare()
+{
+
+}
+
+std::pair<int, int> CTablica::heap_sort()
+{
+
 }
