@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
-    ctablica.cpp
+    ctablica.cpp \
+    csorttablica.cpp
 
 HEADERS += \
-    ctablica.h
+    ctablica.h \
+    csorttablica.h
