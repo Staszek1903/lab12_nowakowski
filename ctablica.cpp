@@ -30,30 +30,34 @@ std::pair<int, int> CTablica::bubble_sort()
 
 std::pair<int, int> CTablica::quick_sort_lomuto(int indexA, int indexB)
 {
-    std::cout<<indexA<<" "<<indexB<<std::endl;
 
+    if(indexA>=indexB)return std::make_pair<int,int>(0,0);
 
     int pivotValue, b;
-    int SwapCounter=0;
+    int SwapCounter=2;
     int ComparisonCounter=0;
     pivotValue = tab[indexA];
     std::swap (tab[indexA], tab[indexB]);
     b = indexA;
 
     for(int a =indexA; a < indexB; a++) {
+            ComparisonCounter++;
         if(tab[a] <= pivotValue)
             {
                 std::swap (tab[a], tab[b]);
+                SwapCounter++;
                 b++;
             }
     }
     std::swap(tab[b], tab[indexB]);
 
-    if(b-1>indexA)
-    quick_sort_lomuto(indexA,b-1 );
-    if(b+1<indexB)
-    quick_sort_lomuto(b+1, indexB);
-    return std::make_pair<int,int> (0,0);
+
+    auto result1 = quick_sort_lomuto(indexA,b-1 );
+
+    auto result2 = quick_sort_lomuto(b+1, indexB);
+    ComparisonCounter += result1.first+result2.first;
+    SwapCounter+=result1.second+result2.second;
+    return std::make_pair<int,int> (int(ComparisonCounter), int(SwapCounter));
 }
 
 std::pair<int, int> CTablica::quick_sort_hoare()
