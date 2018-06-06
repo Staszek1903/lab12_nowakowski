@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1528321611 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
+1528323320 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
 	"csorttablica.h"
 
 1528321611 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.h
@@ -10,7 +10,7 @@
 1528321611 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.cpp
 	"ctablica.h"
 
-1528321611 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
+1528323298 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
 	<iostream>
 	<vector>
 	<utility>

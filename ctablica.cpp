@@ -60,9 +60,41 @@ std::pair<int, int> CTablica::quick_sort_lomuto(int indexA, int indexB)
     return std::make_pair<int,int> (int(ComparisonCounter), int(SwapCounter));
 }
 
-std::pair<int, int> CTablica::quick_sort_hoare()
+std::pair<int, int> CTablica::quick_sort_hoare(int indexA, int indexB)
 {
-    return std::make_pair<int,int> (0,0);
+
+   if(indexA>=indexB)return std::make_pair<int,int>(0,0);
+   int s=(indexA+indexB)/2;
+   int pivotValue=tab[s], a=indexA, b=indexB;
+   int SwapCounter=0;
+   int ComparisonCounter=0;
+   while (a<=b)
+   {
+       ComparisonCounter++;
+      while (tab[a]<pivotValue){
+            ComparisonCounter++;
+            a++;
+            }
+      while (tab[b]>pivotValue){
+            ComparisonCounter++;
+            b--;
+      }
+      if (a<=b)
+      {
+         std::swap(tab[a], tab[b]);
+         SwapCounter++;
+         a++; b--;
+      }
+   }
+   std::pair <int, int> result1, result2;
+   if (b>indexA)
+      result1 = quick_sort_hoare(indexA,b);
+   if (a<indexB)
+      result2 = quick_sort_hoare(a,indexB);
+      ComparisonCounter += result1.first+result2.first;
+    SwapCounter+=result1.second+result2.second;
+    return std::make_pair<int,int> (int(ComparisonCounter), int(SwapCounter));
+
 }
 
 std::pair<int, int> CTablica::heap_sort()

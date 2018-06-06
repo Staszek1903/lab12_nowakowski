@@ -15,7 +15,7 @@ public:
     //returns first- comparison count; second- swap count
     std::pair <int, int> bubble_sort();
     std::pair <int, int> quick_sort_lomuto(int indexA, int indexB);
-    std::pair <int, int> quick_sort_hoare();
+    std::pair <int, int> quick_sort_hoare(int indexA, int indexB);
     std::pair <int, int> heap_sort();
 
 
