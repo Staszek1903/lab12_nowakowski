@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <cstdlib>
 
 template <typename Owner>
 class Menu

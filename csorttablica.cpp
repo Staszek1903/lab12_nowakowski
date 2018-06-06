@@ -64,7 +64,7 @@ void CSortTablica::bubble_sort()
 
 void CSortTablica::quick_sort_lomuto()
 {
-    auto result = _tab.quick_sort_lomuto();
+    auto result = _tab.quick_sort_lomuto(0, _tab.tab.size()-1);
     std::cout<<result.first<<" "<<result.second<<std::endl;
 }
 
