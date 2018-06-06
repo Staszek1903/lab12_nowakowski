@@ -19,7 +19,7 @@ std::pair<int, int> CTablica::bubble_sort()
                     SwapCounter++;
                 }
         }
-        return std::make_pair<int,int> (ComparisonCounter, SwapCounter);
+        return std::make_pair<int,int> (int(ComparisonCounter), int(SwapCounter));
 
     //std::pair <int, int> p;
     //return p;
@@ -29,15 +29,15 @@ std::pair<int, int> CTablica::bubble_sort()
 
 std::pair<int, int> CTablica::quick_sort_lomuto()
 {
-
+    return std::make_pair<int,int> (0,0);
 }
 
 std::pair<int, int> CTablica::quick_sort_hoare()
 {
-
+    return std::make_pair<int,int> (0,0);
 }
 
 std::pair<int, int> CTablica::heap_sort()
 {
-
+    return std::make_pair<int,int> (0,0);
 }
