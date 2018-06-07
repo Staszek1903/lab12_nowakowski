@@ -30,7 +30,7 @@ std::pair<int, int> CTablica::bubble_sort()
 
 std::pair<int, int> CTablica::quick_sort_lomuto(int indexA, int indexB)
 {
-    std::cout<<indexA<<" "<<indexB<<std::endl;
+   // std::cout<<indexA<<" "<<indexB<<std::endl;
 
 
     int pivotValue, b;

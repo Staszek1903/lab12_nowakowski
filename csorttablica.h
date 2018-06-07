@@ -3,7 +3,9 @@
 
 #include "ctablica.h"
 #include "menu.h"
-#include <iostream>
+#include "input.h"
+#include "shufflinggenerator.h"
+#include "file.h"
 
 class CSortTablica
 {
@@ -18,6 +20,7 @@ public:
 
     void fill_tab_manual();
     void fill_tab_random();
+    void fill_tab_random(int count);
 
     void bubble_sort();
     void quick_sort_lomuto();
@@ -25,6 +28,7 @@ public:
     void heap_sort();
 
     void show_tab_content();
+    void create_benchmark_file();
     void close_menu();
 
 private:

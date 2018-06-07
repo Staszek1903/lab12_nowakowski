@@ -33,6 +33,7 @@ public:
 
             void (Owner::*output)() = callbacks[input];
             (owner.*output)();
+
             return;
         }
     }
