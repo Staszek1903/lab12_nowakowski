@@ -24,7 +24,7 @@ public:
     void execute(){
         while(true){
             int input = -1;
-            system("clear");
+            system("cls");
             print_items();
             std::cin>>input;
 

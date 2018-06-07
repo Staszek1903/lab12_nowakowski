@@ -1,24 +1,25 @@
 # depslib dependency file v1.0
-1528311767 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
+1528323320 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
 	"csorttablica.h"
 
-1528311767 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.h
+1528321611 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.h
 	"ctablica.h"
 	"menu.h"
 	<iostream>
 
-1528316810 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.cpp
+1528321611 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.cpp
 	"ctablica.h"
 
-1528316428 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
+1528323298 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
 	<iostream>
 	<vector>
+	<utility>
 
-1528316810 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\main.cpp
+1528321611 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\main.cpp
 	<iostream>
 	"csorttablica.h"
 
-1528312045 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\menu.h
+1528321825 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\menu.h
 	<vector>
 	<iostream>
 	<cstdlib>

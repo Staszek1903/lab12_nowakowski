@@ -85,7 +85,7 @@ void CSortTablica::quick_sort_lomuto()
 
 void CSortTablica::quick_sort_hoare()
 {
-    auto result = _tab.quick_sort_hoare();
+    auto result = _tab.quick_sort_hoare(0, _tab.tab.size()-1);
     std::cout<<result.first<<" "<<result.second<<std::endl;
 }
 
@@ -114,13 +114,16 @@ void CSortTablica::create_benchmark_file()
     file.create(dir);
     auto& filestr = file.getFstream();
 
+    std::cout<<"BUBBLE SORT"<<std::endl;
     fill_tab_random(100);
     auto result = _tab.bubble_sort();
     fill_tab_random(1000);
     auto result2 = _tab.bubble_sort();
     filestr<<"bubble sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
     filestr<<"bubble sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
+    filestr<<"bubble sort: 1000 TOO LARGE "<<std::endl;
 
+    std::cout<<"LOMUTO SORT"<<std::endl;
     fill_tab_random(100);
     result = _tab.quick_sort_lomuto(0,99);
     fill_tab_random(1000);
@@ -131,16 +134,18 @@ void CSortTablica::create_benchmark_file()
     filestr<<"lomuto sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
     filestr<<"lomuto sort: 1000000 losowe elementy "<<result3.first<<" "<<result3.second<<std::endl;
 
+    std::cout<<"HOARE SORT"<<std::endl;
     fill_tab_random(100);
-    result = _tab.quick_sort_hoare();
+    result = _tab.quick_sort_hoare(0,99);
     fill_tab_random(1000);
-    result2 = _tab.quick_sort_hoare();
+    result2 = _tab.quick_sort_hoare(0,999);
     fill_tab_random(1000000);
-    result3 = _tab.quick_sort_hoare();
+    result3 = _tab.quick_sort_hoare(0,999999);
     filestr<<"hoare sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
     filestr<<"hoare sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
     filestr<<"hoare sort: 1000000 losowe elementy "<<result3.first<<" "<<result3.second<<std::endl;
 
+    std::cout<<"HEAP SORT"<<std::endl;
     fill_tab_random(100);
     result = _tab.heap_sort();
     fill_tab_random(1000);
