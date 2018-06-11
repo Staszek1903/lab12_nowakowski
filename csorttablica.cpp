@@ -152,7 +152,7 @@ void CSortTablica::benchark_with_filling(void (CSortTablica::*fill)(int count), 
 
     std::cout<<"Metoda: "<<fill_metode<<std::endl;
 
-    show_tab_content();
+    //show_tab_content();
 
     std::cout<<"BUBBLE SORT"<<std::endl;
     (this->*fill)(100);
