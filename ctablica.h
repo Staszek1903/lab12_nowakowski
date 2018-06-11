@@ -19,7 +19,7 @@ class CTablica
     std::pair <int, int> heap_sort();
 
    private:
-    void heapify(int heapSize, int i);
+    std::pair<int,int> heapify(int heapSize, int i);
 
 
 };
