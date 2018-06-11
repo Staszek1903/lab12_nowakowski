@@ -38,6 +38,8 @@ void CSortTablica::fill_tab_manual()
     std::cout<<"manual fill"<<std::endl<<"elements count: ";
     count = size_input();
 
+    //std::cout<<count<<std::endl;
+
     _tab.tab.resize(count);
     for(int i=0; i<count; ++i){
         std::cout<<"elem"<<i<<": ";

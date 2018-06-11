@@ -29,4 +29,5 @@ int Input::operator ()()
     if(val>_max || val<_min){
         throw pat::InputException("number out of range");
     }
+    return val;
 }
