@@ -7,7 +7,7 @@
 
 class CTablica
 {
-public:
+   public:
     CTablica();
 
     std::vector <int> tab;
@@ -17,6 +17,9 @@ public:
     std::pair <int, int> quick_sort_lomuto(int indexA, int indexB);
     std::pair <int, int> quick_sort_hoare(int indexA, int indexB);
     std::pair <int, int> heap_sort();
+
+   private:
+    void heapify(int heapSize, int i);
 
 
 };
