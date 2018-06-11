@@ -1,5 +1,6 @@
 #include "additivgenerator.h"
 
+
 AdditivGenerator::AdditivGenerator(int size, int mod)
     :modulo(mod), array(size)
 {

@@ -101,5 +101,43 @@ std::pair<int, int> CTablica::quick_sort_hoare(int indexA, int indexB)
 
 std::pair<int, int> CTablica::heap_sort()
 {
+    // Build heap (rearrange array)
+    for (int i = tab.size() / 2 - 1; i >= 0; i--)
+        heapify(tab.size(), i);
+
+    // One by one extract an element from heap
+    for (int i=tab.size()-1; i>=0; i--)
+    {
+        // Move current root to end
+        std::swap(tab[0], tab[i]);
+
+        // call max heapify on the reduced heap
+        heapify(i, 0);
+    }
     return std::make_pair<int,int> (0,0);
+}
+
+void CTablica::heapify(int heapSize, int i)
+{
+
+    int largestItem = i;  // Initialize largest as root
+    int leftChild = 2*i+1 ;  // left = 2*i +1
+    int rightChild = 2*i + 2;  // right = 2*i + 2
+
+    // If left child is larger than root
+    if (leftChild < heapSize && tab[leftChild] > tab[largestItem])
+        largestItem = leftChild;
+
+    // If right child is larger than largest so far
+    if (rightChild < heapSize && tab[rightChild] > tab[largestItem])
+        largestItem = rightChild;
+
+    // If largest is not root
+    if (largestItem != i)
+    {
+        std::swap(tab[i], tab[largestItem]);
+
+        // Recursively heapify the affected sub-tree
+        heapify(heapSize, largestItem);
+    }
 }
