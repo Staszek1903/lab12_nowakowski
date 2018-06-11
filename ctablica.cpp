@@ -36,8 +36,10 @@ std::pair<int, int> CTablica::quick_sort_lomuto(int indexA, int indexB)
     int pivotValue, b;
     int SwapCounter=2;
     int ComparisonCounter=0;
-    pivotValue = tab[indexA];
-    std::swap (tab[indexA], tab[indexB]);
+    int pivotIndex = (indexA+ indexB)/2;
+    pivotValue = tab[pivotIndex];
+
+    std::swap (tab[pivotIndex], tab[indexB]);
     b = indexA;
 
     for(int a =indexA; a < indexB; a++) {

@@ -21,6 +21,9 @@ public:
     void fill_tab_manual();
     void fill_tab_random();
     void fill_tab_random(int count);
+    void fill_tab_ordered(int count);
+    void fill_tab_reversed(int count);
+    void fill_tab_nearly_ordered(int count);
 
     void bubble_sort();
     void quick_sort_lomuto();
@@ -28,10 +31,13 @@ public:
     void heap_sort();
 
     void show_tab_content();
-    void create_benchmark_file();
     void close_menu();
 
+    void create_benchmark_file();
+
 private:
+
+    void benchark_with_filling(void (CSortTablica::*fill)(int count), pat::File & file, std::string fill_metode);
     
 };
 

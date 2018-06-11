@@ -71,6 +71,29 @@ void CSortTablica::fill_tab_random(int count)
     }
 }
 
+void CSortTablica::fill_tab_ordered(int count)
+{
+    _tab.tab.resize(count);
+    for(int i=0; i<count; ++i)
+        _tab.tab[i] = i;
+}
+
+void CSortTablica::fill_tab_reversed(int count)
+{
+    _tab.tab.resize(count);
+    for(int i=0; i<count; ++i)
+        _tab.tab[i] = count - i;
+}
+
+void CSortTablica::fill_tab_nearly_ordered(int count)
+{
+    fill_tab_ordered(count);
+    ShufflingGenerator generator(20,1000);
+
+    for(int i=0; i<count; i+=10)
+        _tab.tab[i] = generator.getRandom();
+}
+
 void CSortTablica::bubble_sort()
 {
     auto result = _tab.bubble_sort();
@@ -112,51 +135,66 @@ void CSortTablica::create_benchmark_file()
 
     pat::File file;
     file.create(dir);
+
+    benchark_with_filling(&CSortTablica::fill_tab_random, file, "random_fill");
+    benchark_with_filling(&CSortTablica::fill_tab_ordered, file, "ordered_fill");
+    benchark_with_filling(&CSortTablica::fill_tab_reversed, file, "reversed_fill");
+    benchark_with_filling(&CSortTablica::fill_tab_nearly_ordered, file, "nearly_ordered");
+
+    file.close();
+}
+
+void CSortTablica::benchark_with_filling(void (CSortTablica::*fill)(int count), pat::File &file, std::string fill_metode)
+{
     auto& filestr = file.getFstream();
 
+    std::cout<<"Metoda: "<<fill_metode<<std::endl;
+
+    show_tab_content();
+
     std::cout<<"BUBBLE SORT"<<std::endl;
-    fill_tab_random(100);
+    (this->*fill)(100);
     auto result = _tab.bubble_sort();
-    fill_tab_random(1000);
+    (this->*fill)(1000);
     auto result2 = _tab.bubble_sort();
-    filestr<<"bubble sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
-    filestr<<"bubble sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
+    filestr<<"bubble sort: 100 "<<fill_metode<<" "<<result.first<<" "<<result.second<<std::endl;
+    filestr<<"bubble sort: 1000 "<<fill_metode<<" "<<result2.first<<" "<<result2.second<<std::endl;
     filestr<<"bubble sort: 1000 TOO LARGE "<<std::endl;
 
     std::cout<<"LOMUTO SORT"<<std::endl;
-    fill_tab_random(100);
+    (this->*fill)(100);
     result = _tab.quick_sort_lomuto(0,99);
-    fill_tab_random(1000);
+    (this->*fill)(1000);
     result2 = _tab.quick_sort_lomuto(0,999);
-    fill_tab_random(1000000);
+    (this->*fill)(1000000);
     auto result3 = _tab.quick_sort_lomuto(0,999999);
-    filestr<<"lomuto sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
-    filestr<<"lomuto sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
-    filestr<<"lomuto sort: 1000000 losowe elementy "<<result3.first<<" "<<result3.second<<std::endl;
+    filestr<<"lomuto sort: 100 "<<fill_metode<<" "<<result.first<<" "<<result.second<<std::endl;
+    filestr<<"lomuto sort: 1000 "<<fill_metode<<" "<<result2.first<<" "<<result2.second<<std::endl;
+    filestr<<"lomuto sort: 1000000 "<<fill_metode<<" "<<result3.first<<" "<<result3.second<<std::endl;
 
     std::cout<<"HOARE SORT"<<std::endl;
-    fill_tab_random(100);
+    (this->*fill)(100);
     result = _tab.quick_sort_hoare(0,99);
-    fill_tab_random(1000);
+    (this->*fill)(1000);
     result2 = _tab.quick_sort_hoare(0,999);
-    fill_tab_random(1000000);
+    (this->*fill)(1000000);
     result3 = _tab.quick_sort_hoare(0,999999);
-    filestr<<"hoare sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
-    filestr<<"hoare sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
-    filestr<<"hoare sort: 1000000 losowe elementy "<<result3.first<<" "<<result3.second<<std::endl;
+    filestr<<"hoare sort: 100 "<<fill_metode<<" "<<result.first<<" "<<result.second<<std::endl;
+    filestr<<"hoare sort: 1000 "<<fill_metode<<" "<<result2.first<<" "<<result2.second<<std::endl;
+    filestr<<"hoare sort: 1000000 "<<fill_metode<<" "<<result3.first<<" "<<result3.second<<std::endl;
 
     std::cout<<"HEAP SORT"<<std::endl;
-    fill_tab_random(100);
+    (this->*fill)(100);
     result = _tab.heap_sort();
-    fill_tab_random(1000);
+    (this->*fill)(1000);
     result2 = _tab.heap_sort();
-    fill_tab_random(1000000);
+    (this->*fill)(1000000);
     result3 = _tab.heap_sort();
-    filestr<<"heap sort: 100 losowe elementy "<<result.first<<" "<<result.second<<std::endl;
-    filestr<<"heap sort: 1000 losowe elementy "<<result2.first<<" "<<result2.second<<std::endl;
-    filestr<<"heap sort: 1000000 losowe elementy "<<result3.first<<" "<<result3.second<<std::endl;
+    filestr<<"heap sort: 100 "<<fill_metode<<" "<<result.first<<" "<<result.second<<std::endl;
+    filestr<<"heap sort: 1000 "<<fill_metode<<" "<<result2.first<<" "<<result2.second<<std::endl;
+    filestr<<"heap sort: 1000000 "<<fill_metode<<" "<<result3.first<<" "<<result3.second<<std::endl;
 
-    file.close();
+
 }
 
 void CSortTablica::close_menu()
