@@ -4,6 +4,10 @@
 #include <stdexcept>
 
 namespace pat {
+    /**
+     * @brief The InputException class
+     *  Klasa wyjątku standartowego wejscia
+     */
     class InputException: public std::logic_error
     {
     public:

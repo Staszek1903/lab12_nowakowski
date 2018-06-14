@@ -9,6 +9,10 @@
 
 namespace pat
 {
+    /**
+     * @brief The File class
+     *  Klasa obslugi plikow
+     */
     class File
     {
         std::string dir;
@@ -16,11 +20,37 @@ namespace pat
 
     public:
         File();
+        /**
+         * @brief load otwiera istniejący plik
+         * @param dir - scierzka do pliku
+         * @return true gdy udalo sie otworzyc lub false w przeciwnym wypadku
+         */
         bool load(std::string dir);
+
+        /**
+         * @brief create tworzy nowy plik i otwiera go
+         * @param dir - scierzka do pliku
+         * @return true gdy udalo sie stworzyc lub false w przeciwnym wypadku
+         */
         bool create(std::string dir);
+
+        /**
+         * @brief close zamyka pliku
+         * @return true
+         */
         bool close();
+
+        /**
+         * @brief getFstream
+         * @return otwarty strumien pliku
+         */
         std::fstream & getFstream();
 
+        /**
+         *  @brief getVal
+         *
+         *  @return zwraca element odczytany z pliku
+         */
         template<class T >
         T getVal()
         {
@@ -29,6 +59,10 @@ namespace pat
            return temp;
         }
 
+        /**
+         *  @brief putVal wpisuje do pliku
+         *  @param val element do wpisania
+         */
         template<class T >
         void putVal(T val)
         {
@@ -36,6 +70,12 @@ namespace pat
         }
 
 
+        /**
+         *  @brief get_array_line wczytuje tablice elementow z pliku
+         *  @param array wskaznik na tablice
+         *  @param size wielkosc tablicy
+         *  @return powodzenie
+         */
         template<class T>
         bool get_array_line(T **array, int size)
         {

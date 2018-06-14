@@ -1,5 +1,6 @@
 #include <iostream>
 #include "csorttablica.h"
+
 using namespace std;
 
 int main()
@@ -12,7 +13,6 @@ int main()
         std::cout<<"ERROR: " <<error.what()<<std::endl;
         return 0;
     }
-
 
     return 0;
 }

@@ -4,6 +4,10 @@
 #include <stdexcept>
 
 namespace pat {
+    /**
+     * @brief The FileException class
+     *  Klasa wyjątku rzucanego podczas blędu w plikach
+     */
     class FileException : public std::runtime_error
     {
     public:

@@ -7,16 +7,34 @@
 #include <time.h>
 #include "lineargenerator.h"
 
+/**
+ * @brief The AdditivGenerator class
+ *      Generator liczb pseudolosowych metodą addytywną
+ */
 class AdditivGenerator
 {
     int modulo;
     std::vector <int> array;
     std::pair <int, int>  base_pair;
 public:
-    //size - rozmiaz tablicy tosowania
-    //mod  - modullo generatora
+
+    /**
+     * @brief AdditivGenerator
+     *
+     * @param size - rozmiaz tablicy tosowania
+     * @param mod  - modullo generatora
+     */
     AdditivGenerator(int size, int mod);
+
+    /**
+     * @brief getRandom zwraca liczbe pseudolosową
+     * @return liczba pseudolosowa
+     */
     int getRandom();
+
+    /**
+     * @brief printTable wyswietla tablice
+     */
     void printTable();
 };
 
