@@ -7,7 +7,7 @@
 
 /**
  * @brief The LinearGenerator class
- *  Generator liczb pseudorolowych metodą liniową
+ *  Generator liczb pseudolosowych metodą liniową
  */
 class LinearGenerator
 {

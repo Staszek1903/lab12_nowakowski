@@ -1,0 +1,48 @@
+bubble sort: 100 random_fill 4950 2632
+bubble sort: 1000 random_fill 499500 242507
+bubble sort: 1000 TOO LARGE 
+lomuto sort: 100 random_fill 665 498
+lomuto sort: 1000 random_fill 12733 8421
+lomuto sort: 1000000 random_fill 513207185 509159643
+hoare sort: 100 random_fill 657 190
+hoare sort: 1000 random_fill 9799 2731
+hoare sort: 1000000 random_fill 15527664 7002591
+heap sort: 100 random_fill 1860 570
+heap sort: 1000 random_fill 28851 9117
+heap sort: 1000000 random_fill 58599690 19033230
+bubble sort: 100 ordered_fill 4950 0
+bubble sort: 1000 ordered_fill 499500 0
+bubble sort: 1000 TOO LARGE 
+lomuto sort: 100 ordered_fill 480 345
+lomuto sort: 1000 ordered_fill 7987 4960
+lomuto sort: 1000000 ordered_fill 17951445 9933573
+hoare sort: 100 ordered_fill 543 63
+hoare sort: 1000 ordered_fill 8498 511
+hoare sort: 1000000 ordered_fill 18475732 524287
+heap sort: 100 ordered_fill 2073 641
+heap sort: 1000 ordered_fill 30627 9709
+heap sort: 1000000 ordered_fill 60863379 19787793
+bubble sort: 100 reversed_fill 4950 4950
+bubble sort: 1000 reversed_fill 499500 499500
+bubble sort: 1000 TOO LARGE 
+lomuto sort: 100 reversed_fill 514 399
+lomuto sort: 1000 reversed_fill 8406 5506
+lomuto sort: 1000000 reversed_fill 18401192 10549175
+hoare sort: 100 reversed_fill 498 112
+hoare sort: 1000 reversed_fill 8006 1010
+hoare sort: 1000000 reversed_fill 17975750 1024286
+heap sort: 100 reversed_fill 1701 517
+heap sort: 1000 reversed_fill 26451 8317
+heap sort: 1000000 reversed_fill 56500227 18333409
+bubble sort: 100 nearly_ordered 4950 489
+bubble sort: 1000 nearly_ordered 499500 28805
+bubble sort: 1000 TOO LARGE 
+lomuto sort: 100 nearly_ordered 548 328
+lomuto sort: 1000 nearly_ordered 9812 6960
+lomuto sort: 1000000 nearly_ordered 34624077 21491194
+hoare sort: 100 nearly_ordered 657 156
+hoare sort: 1000 nearly_ordered 9542 1490
+hoare sort: 1000000 nearly_ordered 23559580 3118095
+heap sort: 100 nearly_ordered 1863 571
+heap sort: 1000 nearly_ordered 29715 9405
+heap sort: 1000000 nearly_ordered 60351522 19617174

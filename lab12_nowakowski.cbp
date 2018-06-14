@@ -32,7 +32,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="additivgenerator.cpp" />
+		<Unit filename="additivgenerator.h" />
+		<Unit filename="csorttablica.cpp" />
+		<Unit filename="csorttablica.h" />
+		<Unit filename="ctablica.cpp" />
+		<Unit filename="ctablica.h" />
+		<Unit filename="file.cpp" />
+		<Unit filename="file.h" />
+		<Unit filename="fileexception.cpp" />
+		<Unit filename="fileexception.h" />
+		<Unit filename="input.cpp" />
+		<Unit filename="input.h" />
+		<Unit filename="inputexception.cpp" />
+		<Unit filename="inputexception.h" />
+		<Unit filename="lineargenerator.cpp" />
+		<Unit filename="lineargenerator.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="shufflinggenerator.cpp" />
+		<Unit filename="shufflinggenerator.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

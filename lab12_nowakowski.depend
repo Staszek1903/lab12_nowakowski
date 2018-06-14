@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1528740215 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
+1528748099 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.cpp
 	"csorttablica.h"
 
-1528740215 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\csorttablica.h
 	"ctablica.h"
 	"menu.h"
 	"input.h"
@@ -12,16 +12,16 @@
 1528747140 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.cpp
 	"ctablica.h"
 
-1528747140 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
+1528995066 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\ctablica.h
 	<iostream>
 	<vector>
 	<utility>
 
-1528740216 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\main.cpp
+1528994098 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\main.cpp
 	<iostream>
 	"csorttablica.h"
 
-1528740216 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\menu.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\menu.h
 	<vector>
 	<iostream>
 	<cstdlib>
@@ -32,36 +32,36 @@
 1528740449 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\additivgenerator.cpp
 	"additivgenerator.h"
 
-1528740449 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\additivgenerator.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\additivgenerator.h
 	<utility>
 	<vector>
 	<iostream>
 	<time.h>
 	"lineargenerator.h"
 
-1528740216 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\lineargenerator.h
+1528994306 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\lineargenerator.h
 	<iostream>
 	<vector>
 	<cmath>
 
-1528740216 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\input.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\input.h
 	<iostream>
 	<bits/stdc++.h>
 	"inputexception.h"
 
-1528740216 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\inputexception.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\inputexception.h
 	<stdexcept>
 
-1528740216 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\shufflinggenerator.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\shufflinggenerator.h
 	"additivgenerator.h"
 
-1528740215 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\file.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\file.h
 	<iostream>
 	<fstream>
 	<sstream>
 	"fileexception.h"
 
-1528740215 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\fileexception.h
+1528994098 c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\fileexception.h
 	<stdexcept>
 
 1528740215 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\file.cpp
@@ -70,7 +70,7 @@
 1528740215 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\fileexception.cpp
 	"fileexception.h"
 
-1528740216 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\input.cpp
+1528747449 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\input.cpp
 	"input.h"
 
 1528740216 source:c:\users\pawel\desktop\projekt_mp\lab12_nowakowski\inputexception.cpp
